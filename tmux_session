@@ -29,13 +29,13 @@ if [ $? != 0 ]
     tmux select-pane -t 0
     tmux send-keys "cd ~/GIT" C-m
     tmux select-pane -t 1
-    tmux send-keys "cd ~/Gazebo/Firmware" C-m
+    tmux send-keys "cd ~/GIT" C-m
     tmux select-pane -t 2
-    tmux send-keys "cd ~/Gazebo" C-m
+    tmux send-keys "cd ~/GIT" C-m
     tmux select-pane -t 3
-    tmux send-keys "cd ~/catkin_ws" C-m
+    tmux send-keys "cd ~/GIT" C-m
     tmux select-pane -t 4
-    tmux send-keys "cd ~/Gazebo" C-m
+    tmux send-keys "cd ~/GIT" C-m
 
 
     tmux new-window -t $SESSIONNAME:3 -n 4panes
