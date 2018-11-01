@@ -27,15 +27,15 @@ if [ $? != 0 ]
     tmux resize-pane -R 20
 
     tmux select-pane -t 0
-    tmux send-keys "cd ~/GIT" C-m
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
     tmux select-pane -t 1
-    tmux send-keys "cd ~/GIT" C-m
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
     tmux select-pane -t 2
-    tmux send-keys "cd ~/GIT" C-m
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
     tmux select-pane -t 3
-    tmux send-keys "cd ~/GIT" C-m
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
     tmux select-pane -t 4
-    tmux send-keys "cd ~/GIT" C-m
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
 
 
     tmux new-window -t $SESSIONNAME:3 -n 4panes
