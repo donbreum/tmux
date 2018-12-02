@@ -5,9 +5,31 @@ tmux has-session -t $SESSIONNAME &> /dev/null
 
 if [ $? != 0 ]
  then
-    tmux new-session -s $SESSIONNAME -n 3panes -d
+    tmux new-session -s $SESSIONNAME -n rmuasd -d
+    tmux split-window -h
+    tmux resize-pane -R 25
+    tmux select-pane -t 0
     tmux split-window -v
     tmux split-window -h
+    tmux select-pane -t 0
+    # tmux split-window -h
+    tmux select-pane -t 2
+    tmux split-window -v
+    tmux select-pane -t 0
+    tmux resize-pane -U 5
+    tmux select-pane -t 0
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
+    tmux select-pane -t 1
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
+    tmux select-pane -t 2
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
+    tmux select-pane -t 3
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
+    tmux select-pane -t 4
+    tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
+    # tmux select-pane -t 5
+    # tmux send-keys "cd ~/GIT/RMUASD-Team3-2018/GCS" C-m
+    
     tmux send-keys -t $SESSIONNAME "~/GIT/tmux/tmux_session" C-m
     tmux new-window -t $SESSIONNAME:2 -n gazeboros
     tmux split-window -v
